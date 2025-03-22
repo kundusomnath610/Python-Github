@@ -3,7 +3,7 @@ di = {}
 
 for i in s1:
     if i in di:
-        di[i] = di[i] + 1
+        di[i] = di[i] + 1 
     else:
         di[i] = 1
 
