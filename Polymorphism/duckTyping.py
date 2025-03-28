@@ -12,3 +12,6 @@ class Mul(Calsi):
 
 class div(Calsi):
     pass
+
+def permit(ref):
+    ref.calculate(10, 20)
