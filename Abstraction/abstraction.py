@@ -1,59 +1,36 @@
-from abc import ABC, abstractmethod
+from abc import ABC , abstractmethod
 
-class Animal(ABC):
+'''Rule: 1 We can create an Object for empty abstract class '''
+class Animal1(ABC):
     pass
+a1 = Animal1()
 
-# This is allowed because Animal has no abstract methods
-a1 = Animal()
-
-class Animal(ABC):
+'''Rule: 2 If abstract class contains abstract method then object for that abstract class 
+cannot be created and abstract method cannot be invoked.'''
+class Animal2(ABC):
     @abstractmethod
     def eat(self):
         pass
+# a2 = Animal1()
 
-
-'''
-    Rule 3:- If an abstract class contains only concrete methods, 
-    then an object can be created, and concrete methods can be invoked.
-'''
-class Animal2(ABC):
+'''Rule: 3 If abstract class contains only concrete methods , then object can be created and
+concrete method can be invoked.'''
+class Animal3(ABC):
     def eat(self):
-        print("Inside eat")
-
-# This is allowed because Animal2 has only concrete methods
-a3 = Animal2()
+        print('Inside eat')
+a3 = Animal3()
 a3.eat()
 
-'''
-    Rule 4:- If a class is derived from an abstract class and does not implement 
-    all abstract methods, then an object of the derived class cannot be created.
-'''
-
+'''Rule 4: If class is derived from abstract class and not given body for all abstract methods
+in child class then child class objcet cannot be created.'''
 class Animal4(ABC):
     @abstractmethod
     def eat(self):
         pass
-
     @abstractmethod
     def sleep(self):
         pass
-
-# This class is incomplete because it does not implement `sleep()`
 class Child(Animal4):
     def eat(self):
-        print("Inside eat")
-
-# c = Child()  # Not allowed: Child must implement `sleep()`
-
-# Properly implementing `sleep()`
-class FullyImplementedChild(Animal4):
-    def eat(self):
-        print("Inside eat")
-
-    def sleep(self):
-        print("Inside sleep")
-
-# Now, this works:
-c2 = FullyImplementedChild()
-c2.eat()
-c2.sleep()
+        print('Inside eat')
+# c = Child() Not allowed
