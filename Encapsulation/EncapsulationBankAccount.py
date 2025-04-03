@@ -1,6 +1,6 @@
 class BankAccount:
     def __init__(self):
-        self.__balance = 0
+        self.__balance = 0 # private variable.
 
     def deposite(self, amount):
         if amount > 0:
