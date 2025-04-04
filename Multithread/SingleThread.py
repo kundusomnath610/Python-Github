@@ -13,11 +13,16 @@ def print_characters():
 #print_numbers()
 #print_characters()
 
-thread1 = threading.Thread(target=print_numbers)   # 
+thread1 = threading.Thread(target=print_numbers)   # Threading is a module.. and Thread is a class
 thread2 = threading.Thread(target=print_characters)
-thread1.start()
+thread1.start() # start() It is method..
 thread2.start()
 
-thread1.join()
+thread1.join() # join() it is also method
 thread2.join()
-print("All thread Executed")
+
+
+#print("All thread Executed")
+
+print(f"Is Thread1 alive? {thread1.is_alive()}")
+print('All thread Executed')
