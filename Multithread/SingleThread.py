@@ -10,5 +10,14 @@ def print_characters():
         print(i)
         time.sleep(2)
 
-print_numbers()
-print_characters()
+#print_numbers()
+#print_characters()
+
+thread1 = threading.Thread(target=print_numbers)   # 
+thread2 = threading.Thread(target=print_characters)
+thread1.start()
+thread2.start()
+
+thread1.join()
+thread2.join()
+print("All thread Executed")
