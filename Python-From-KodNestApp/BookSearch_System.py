@@ -4,7 +4,7 @@ def add_book(title, available_books):
 
 def search_book(title, available_books):
     if title in available_books:
-        print(f"'{title}' is available in the library.")
+        print(f"'{title}' is available in the library.")  
     else:
         print(f"Sorry, '{title}' is not available in the library.")
 
