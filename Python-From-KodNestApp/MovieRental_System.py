@@ -6,7 +6,7 @@ def search_movie(title, available_movies):
     if title in available_movies:
         print(f"'{title}' is available in the collection.")
     else:
-        print(f"'{title}', is not available in Movie List")
+        print(f"'{title}' is not available in Movie List")
 
 
 def view_movies(available_movies):
