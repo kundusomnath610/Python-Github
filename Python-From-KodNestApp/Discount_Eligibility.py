@@ -1,12 +1,13 @@
-score = int(input("Enter a score: "))
+weight = int(input("Enter weight: "))
+height = float(input())
 
-if score >= 90:
-    print("Grade: A")
-elif score >= 80 and score <= 89:
-    print("Grade: B")
-elif score >= 70 and score <= 79:
-    print("Grade: C")
-elif score >= 60 and score <= 69:
-    print("Grade: D")
-elif score <= 60:
-    print("Grade: F")
+result = weight / (height ** 2)
+
+if result >= 30:
+    print("You are in Obese category.")
+elif result >= 25 and result <= 29.9:
+    print("You are in the Overweight category.")
+elif result >= 18.5 and result <= 24.9:
+    print("You are the normal weight category.")
+elif result <= 18.5:
+    print("You are in the underWeight Category.")
