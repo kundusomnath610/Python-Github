@@ -12,7 +12,7 @@ def search_movie(title, available_movies):
 def view_movies(available_movies):
     print(f"Available movies: {available_movies}")
 
-available_movies = ["The Matrix", "Interstellar", "The Godfather"]
+available_movies = ['The Matrix', 'Interstellar', 'The Godfather']
 
 view_movies(available_movies)
 
@@ -22,5 +22,5 @@ view_movies(available_movies)
 
 search_movie('The Matrix', available_movies)
 
-search_movie('Godfather', available_movies)
+search_movie('The Godfather', available_movies)
     
