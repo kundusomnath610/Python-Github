@@ -2,7 +2,7 @@
 numbers_list = input("Enter numbers without spaces (e.g., 12345): ")
 
 # TODO: Convert the input string into a list of integers
-numbers = [int(ch) for ch in numbers_list]
+numbers = [int(char) for char in numbers_list]
 
 # TODO: Use list slicing to reverse the list and print it
 reversed_numbers = numbers[::-1]
