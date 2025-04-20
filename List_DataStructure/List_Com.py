@@ -19,6 +19,21 @@ print()
     cause when i access the list id it print same..
 '''
 
-list = [[]] * 5
-for list1 in list:
-    print(id(list1))
+# list = [[]] * 5
+# for list1 in list:
+#     print(id(list1))
+
+
+'''
+    Good idea to create the nested list with range() function..
+'''
+
+mylist = [[]for i in range(5)]
+print(mylist)
+for object in mylist:
+    print(id(mylist))
+
+list = ["code", "Java", "Python", "Java"]
+print(list)
+list.count("Java")
+print(list)
