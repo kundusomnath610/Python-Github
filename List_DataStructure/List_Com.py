@@ -35,5 +35,8 @@ for object in mylist:
 
 list = ["code", "Java", "Python", "Java"]
 print(list)
-list.count("Java")
+mylist = list.count("Java")
+print(mylist)
+list.remove("code")
 print(list)
+print
