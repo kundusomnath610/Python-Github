@@ -10,3 +10,17 @@ def reverse_string(str):
     return rev_string
 
 print(reverse_string(str))
+
+
+"""
+    Recursive Approch to reverse string...
+"""
+
+str = "Hello"
+
+def rev_string(str):
+    if len(str) <= 1:
+        return str
+    
+    return rev_string(str[1:]) + str[0]
+print(rev_string(str))
