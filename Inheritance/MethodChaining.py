@@ -1,6 +1,6 @@
 class GrandParent:
     def cook(self):
-        print("Briyani")
+        print("Biryani")
 
 class parent(GrandParent):
     def cook(self):
