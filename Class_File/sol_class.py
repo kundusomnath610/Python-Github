@@ -14,6 +14,10 @@ class Car:
     def fuel_type(self): # Polymorphism for Car Class
         return "Diesel and Petrol"
 
+    @staticmethod
+    def general_description(): # Static Method function cause it i in Class
+        return "Car Mode of transport"
+
 class ElectricCar(Car): # Inheriting the Car class Property
     def __init__(self, brand, model, battery_size):
         super().__init__(brand, model)
@@ -35,8 +39,8 @@ car2 = Car("Nissan", "Mustang")
 print(car1.model)
 print(car1.brand)
 print(car1.new_car())
-print()
 print(car2.brand)
 print(car2.model)
+print()
 
 print(Car.total_car)
