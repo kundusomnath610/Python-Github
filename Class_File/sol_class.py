@@ -6,6 +6,16 @@ class Car:
     def new_car(self): # This is a Method
         return f"Model: {self.model}, Brand: {self.brand}"
 
+class ElectricCar(Car):
+    def __init__(self, brand, model, battery_size):
+        super().__init__(brand, model)
+        self.battery_size = battery_size
+
+new_car = ElectricCar("Tesla", "Model X", "5.0 Kv")
+print(new_car.model)
+print(new_car.brand)
+print(new_car.battery_size)
+
 car1 = Car("Maruti", "Alto 800")
 print(car1.model)
 print(car1.brand)
