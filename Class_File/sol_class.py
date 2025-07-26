@@ -1,7 +1,9 @@
 class Car:
+    total_car = 0
     def __init__(self, brand, model): # Constructor and referring object
         self.brand = brand
         self.model = model
+        Car.total_car += 1
 
     def new_car(self): # This is a Method
         return f"Model: {self.model}, Brand: {self.brand}"
@@ -26,8 +28,15 @@ new_car = ElectricCar("Tesla", "Model X", "5.0 Kv")
 print(new_car.model)
 print(new_car.brand)
 print(new_car.battery_size)
+print()
 
 car1 = Car("Maruti", "Alto 800")
+car2 = Car("Nissan", "Mustang")
 print(car1.model)
 print(car1.brand)
 print(car1.new_car())
+print()
+print(car2.brand)
+print(car2.model)
+
+print(Car.total_car)
