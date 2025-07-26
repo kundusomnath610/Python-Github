@@ -2,8 +2,8 @@ def auth_decorator(fun):
     """
     Auth HardCode function username = "Admin" and Password = "password"
     """
-    username = input("Enter User name: ")
-    password = input("Enter Password: ")
+    username = input("Enter User name: ") # input
+    password = input("Enter Password: ") # input
 
     def wrapper():
         correct_username = "Admin"
