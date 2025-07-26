@@ -1,14 +1,16 @@
 def auth_decorator(fun):
+    """
+    Auth HardCode function username = "Admin" and Password = "password"
+    """
+    username = input("Enter User name: ")
+    password = input("Enter Password: ")
+
     def wrapper():
-        correct_useename = "Admin"
-        correct_password = "password"
+        correct_username = "Admin"
+        correct_password = "Admin"
 
-        username = "Admin"
-        password = "password"
-
-        if (username, password) == (correct_useename, correct_password):
+        if (username, password) == (correct_username, correct_password):
             print("Access Authentication")
-            func()
         else:
             print("Access denied")
     return wrapper
