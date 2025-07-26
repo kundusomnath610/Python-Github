@@ -18,6 +18,10 @@ class Car:
     def general_description(): # Static Method function cause it i in Class
         return "Car Mode of transport"
 
+    # @property
+    # def model(self):
+    #     return self.__model
+
 class ElectricCar(Car): # Inheriting the Car class Property
     def __init__(self, brand, model, battery_size):
         super().__init__(brand, model)
@@ -44,3 +48,18 @@ print(car2.model)
 print()
 
 print(Car.total_car)
+
+class Battery:
+    def battery_info(self):
+        return "This is best Battery"
+
+class Engine:
+    def engine_info(self):
+        return "This is engine info"
+
+class Ninja(Battery, Engine, Car):
+    pass
+
+ninja_bike = Ninja("Kawasaki", "Ninja 650 RR")
+print(ninja_bike.battery_info())
+print(ninja_bike.engine_info())
